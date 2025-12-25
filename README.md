@@ -102,15 +102,6 @@ Then open: `http://localhost:7860`
 - 💬 Interactive Mode tab - Have real conversations
 - 🔊 Audio output - Listen to agent responses
 
-### Demo Call Script
-
-```bash
-python demo_call.py                    # Run scenario 1
-python demo_call.py --scenario 2       # Run specific scenario
-python demo_call.py --list             # List all scenarios
-python demo_call.py --pause 2          # 2 second pause between exchanges
-```
-
 ---
 
 ## ⚙️ Configuration
@@ -183,9 +174,7 @@ DEBUG=false
 ### Run Pre-flight Test
 
 ```bash
-python preflight_test.py                    # Run all tests
-python preflight_test.py --verbose          # Detailed output
-python preflight_test.py --quick            # Quick check (3 tests only)
+python run_agent.py --test 
 ```
 
 ### Run Test Harness
@@ -272,9 +261,7 @@ french-debt-collection-agent/
 ├── agent.py                 # Core agent logic
 ├── gradio_app.py           # Gradio web interface
 ├── run_agent.py            # CLI entry point
-├── preflight_test.py       # Self-test script
 ├── test_harness.py         # Synthetic test suite
-├── demo_call.py            # End-to-end demo script
 ├── config.yaml             # Client configurations
 ├── requirements.txt        # Python dependencies
 ├── .env.example            # Environment template
@@ -336,7 +323,7 @@ cat .env  # (don't share output!)
 
 ```bash
 # Run with verbose output
-python preflight_test.py --verbose
+python run_agent.py --test 
 
 # Check:
 # 1. Is GEMINI_API_KEY set?
@@ -348,7 +335,7 @@ python preflight_test.py --verbose
 
 1. Check API quota in Google Cloud Console
 2. Verify API key is valid
-3. Run `preflight_test.py` to diagnose
+
 
 ### "Config file not found"
 
@@ -420,52 +407,6 @@ Automated testing:
 
 ---
 
-## 🤝 Contributing
-
-To improve the agent:
-
-1. **Test thoroughly**
-   ```bash
-   python preflight_test.py
-   python test_harness.py
-   ```
-
-2. **Update system prompt** in `agent.py` and `gradio_app.py`
-
-3. **Add test scenarios** in `test_harness.py`
-
-4. **Run test harness** to verify improvements
-   ```bash
-   python test_harness.py --verbose
-   ```
-
----
-
-## 📋 Next Steps
-
-- [ ] Add voice input (Whisper STT)
-- [ ] Multi-language support
-- [ ] Advanced conversation scenarios
-- [ ] Payment link integration
-- [ ] Conversation analytics
-- [ ] Real phone integration (Twilio)
-
----
-
-## 📄 License
-
-Proprietary - Do not distribute without permission.
-
----
-
-## 📞 Support
-
-For issues:
-
-1. **Check troubleshooting** above
-2. **Run preflight test** for diagnostics
-3. **Check test_report.md** for recent test results
-4. **Verify .env** has correct API key
 
 ---
 
@@ -478,18 +419,15 @@ cp .env.example .env
 # (edit .env with your API key)
 
 # Testing
-python preflight_test.py
+python run_agent.py --test 
 python test_harness.py
 
 # Running
 python run_agent.py --client dell
 python gradio_app.py
-python demo_call.py --scenario 1
 
-# Utilities
-python run_agent.py --list              # List clients
-python test_harness.py --verbose        # Detailed test output
-python preflight_test.py --quick        # Quick health check
+
+
 ```
 
 ---
