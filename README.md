@@ -220,7 +220,7 @@ The test harness measures:
 - ✅ Upset/angry client behavior
 - ✅ Multiple language switches
 
-See full report: [test_report.md](./test_report.md)
+See full report: [test_report.md](https://github.com/Sumhack/french_voice_agent/blob/main/test_report.md)
 
 ---
 
@@ -372,7 +372,7 @@ Watch the agent in action:
 - **Scenarios:** 2 different client interactions
 - **Quality:** Shows conversation flow and audio responses
 
-[View Demo Video](https://your-loom-link-here)
+[View Demo Video](https://www.loom.com/share/423beece0ed6421592c9161907137043)
 
 ---
 
