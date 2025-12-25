@@ -2,7 +2,7 @@
 
 A respectful, conversational AI agent that conducts professional debt collection conversations in French. Fully configurable for different client brands with varying tones and phrasing.
 
-**Live Demo:** [HuggingFace Spaces](https://huggingface.co/spaces) (add your link)
+**Live Demo:** [HuggingFace Spaces](https://huggingface.co/spaces/sumhack/french_voice_agent) 
 
 ---
 
@@ -24,7 +24,7 @@ A respectful, conversational AI agent that conducts professional debt collection
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/french-debt-collection-agent.git
+git clone https://github.com/Sumhack/french_voice_agent.git
 cd french-debt-collection-agent
 ```
 
