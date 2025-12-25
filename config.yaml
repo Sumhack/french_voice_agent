@@ -1,0 +1,50 @@
+# French Debt Collection Agent - Client Configuration
+# Modify these settings to adjust tone and phrasing per client
+
+clients:
+  amazon_business:
+    client_name: "Amazon Business"
+    tone: "formal"
+    formality_level: "high"
+    phrasing: "concise"
+    payment_label: "règlement du solde impayé"
+    closing_line: "Merci de votre compréhension et de votre collaboration."
+
+  dell:
+    client_name: "Dell"
+    tone: "professional"
+    formality_level: "medium"
+    phrasing: "direct"
+    payment_label: "régulariser votre compte"
+    closing_line: "Nous apprécions votre attention à cette affaire."
+
+  microsoft:
+    client_name: "Microsoft"
+    tone: "collaborative"
+    formality_level: "medium"
+    phrasing: "conversational"
+    payment_label: "résoudre cette situation ensemble"
+    closing_line: "Merci de votre aide pour clarifier cette question."
+
+# Agent settings
+agent:
+  model: "gemini-2.5-flash"
+  max_history: 10
+  closing_words:
+    - "au revoir"
+    - "à bientôt"
+    - "fin"
+    - "quitter"
+    - "arrêter"
+    - "terminer"
+    - "raccrocher"
+    - "bye"
+
+# Example of how to add a new client:
+# acme_corp:
+#   client_name: "ACME Corporation"
+#   tone: "friendly"
+#   formality_level: "low"
+#   phrasing: "conversational"
+#   payment_label: "résoudre votre facture"
+#   closing_line: "Merci et au revoir!"
